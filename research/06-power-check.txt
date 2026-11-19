@@ -1,0 +1,15 @@
+# Power check on made-up data (no real data read)
+Rules under test: scoring.py as written on 2026-11-17. 300 made-up worlds per row, 2,000 resamples each.
+'True margin' is the median measured margin across the made-up worlds, so it is a property of the made-up world, not of the Bay.
+
+[Public copy: the two "SF Bay-like" sections are left out. Their yearly event counts came from the restricted Bay file.]
+
+## Long Island-like (event counts are a guess)
+years 11, target events per year [8, 10, 12, 25, 30, 35, 35, 40, 40, 50, 55], 3 stations x 300 eligible days, year-to-year spread of the extra signal 0.5
+| extra signal | true margin (median) | LARGE | BEATS | NO DIFFERENCE | NOT SHOWN | median interval |
+|---|---|---|---|---|---|---|
+| 0.0 | -4% | 0% | 0% | 53% | 47% | [-10%, +2%] |
+| 0.3 | +1% | 0% | 2% | 46% | 52% | [-8%, +9%] |
+| 0.5 | +9% | 2% | 17% | 3% | 78% | [-3%, +24%] |
+| 0.7 | +20% | 19% | 21% | 0% | 60% | [+1%, +43%] |
+| 1.0 | +42% | 67% | 4% | 0% | 29% | [+12%, +88%] |

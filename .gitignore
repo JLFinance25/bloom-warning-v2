@@ -1,0 +1,9 @@
+# Raw data is downloaded, not committed (data/raw/SOURCES.md says from where)
+data/raw/*
+!data/raw/SOURCES.md
+data/processed/
+
+.venv/
+__pycache__/
+*.pyc
+.DS_Store

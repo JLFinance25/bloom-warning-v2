@@ -1,0 +1,10 @@
+method,fresh_primary_score,fresh_counted_years,fresh_counted_events,bar_method,beats_bar_on_fresh
+B1,0.531096507856,11,201,B1,False
+B2,0.459043317724,11,201,B1,False
+T1,0.427762500603,11,201,B1,False
+T2,0.423409908331,11,201,B1,False
+T3,0.573207139392,11,201,B1,True
+T3_twin,0.498666343417,11,201,B1,False
+base_rate,0.0460784050872,11,201,B1,False
+month_only,0.131076607109,11,201,B1,False
+station_only,0.055596004311,11,201,B1,False

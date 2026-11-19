@@ -1,0 +1,16 @@
+Place: li. Verdict years 2015-2025; outside the verdict: 2026.
+Counted years: 11; events in counted years: 458; part-window events (all test years): 28.
+B2 at Long Island is B2-LI (no tide, sun or wind): a weaker bar than SF Bay's B2. Every Long Island margin below is against that weaker bar.
+T4 skipped: no outside-inputs table supplied.
+Verdicts (family = T1 to T4 at this place):
+  T1: NOT SHOWN; primary 0.4328; margin -0.1058; interval [-0.2125, -0.0174]; years won 2.0/11.0 (need 9.0); low end reaches +10%: False
+  T2: NOT SHOWN; primary 0.4218; margin -0.1285; interval [-0.2470, -0.0255]; years won 1.0/11.0 (need 9.0); low end reaches +10%: False
+  T3: NOT SHOWN; primary 0.4739; margin -0.0208; interval [-0.1506, +0.1224]; years won 6.0/11.0 (need 9.0); low end reaches +10%: False
+  T4: NOT RUN
+Win bar (blind tries T1-T3): NOT MET. Win bar (any try): NOT MET.
+Credit to new inputs allowed: True (T3 over T3-twin: True; T2 over B2: False).
+Primary score of every method (primary_scores.csv): B1 0.4840, B2 0.4404, T1 0.4328, T2 0.4218, T3 0.4739, T3_twin 0.4389, base_rate 0.0872, month_only 0.1818, station_only 0.1056
+Warnings raised while fitting (audit_warnings.csv): 0.
+Pooled average precision over verdict-year examples (no verdict): B1 0.4632, B2 0.3969, T1 0.3845, T2 0.3717, T3 0.4436, T3_twin 0.4088, base_rate 0.0813, month_only 0.1403, station_only 0.0875
+Fresh-onset primary score (no verdict): B1 0.5311, B2 0.4590, T1 0.4278, T2 0.4234, T3 0.5732, T3_twin 0.4987, base_rate 0.0461, month_only 0.1311, station_only 0.0556
+No score here is a probability. Nothing here predicts harmful algal blooms or toxins.
