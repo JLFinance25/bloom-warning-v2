@@ -1,0 +1,50 @@
+{
+  "pulled_utc": "2026-11-17T23:17:53Z",
+  "files": [
+    {
+      "site": "01311143",
+      "name": "Hog Island Channel at Island Park NY",
+      "file": "usgs_dv_01311143.rdb",
+      "url": "https://waterservices.usgs.gov/nwis/dv/?format=rdb&sites=01311143&parameterCd=32316%2C00010%2C90860%2C00300%2C63680&statCd=00001%2C00002%2C00003&startDT=2010-01-01&endDT=2026-11-16",
+      "bytes": 660728,
+      "data_rows": 5580,
+      "sha256": "634c0d68a280eda80e8478ebd7548e9f29f0188b8b038781206d0f83b23bf611"
+    },
+    {
+      "site": "01310740",
+      "name": "Reynolds Channel at Point Lookout NY",
+      "file": "usgs_dv_01310740.rdb",
+      "url": "https://waterservices.usgs.gov/nwis/dv/?format=rdb&sites=01310740&parameterCd=32316%2C00010%2C90860%2C00300%2C63680&statCd=00001%2C00002%2C00003&startDT=2010-01-01&endDT=2026-11-16",
+      "bytes": 710643,
+      "data_rows": 5783,
+      "sha256": "b3ecff73f29e092036c44142b093cd3c31d26a7301eb2c5670f1f33ed06da740"
+    },
+    {
+      "site": "01304562",
+      "name": "Peconic River at County Hwy 105 at Riverhead NY",
+      "file": "usgs_dv_01304562.rdb",
+      "url": "https://waterservices.usgs.gov/nwis/dv/?format=rdb&sites=01304562&parameterCd=32316%2C00010%2C90860%2C00300%2C63680&statCd=00001%2C00002%2C00003&startDT=2010-01-01&endDT=2026-11-16",
+      "bytes": 604934,
+      "data_rows": 4866,
+      "sha256": "151d06a0ab744ff14a15ac89c3843cc47c5a7f284a35566fbe29fc99f6a813d5"
+    },
+    {
+      "site": "01304650",
+      "name": "Shelter Island Sound at Shelter Island NY",
+      "file": "usgs_dv_01304650.rdb",
+      "url": "https://waterservices.usgs.gov/nwis/dv/?format=rdb&sites=01304650&parameterCd=32316%2C00010%2C90860%2C00300%2C63680&statCd=00001%2C00002%2C00003&startDT=2010-01-01&endDT=2026-11-16",
+      "bytes": 141594,
+      "data_rows": 1365,
+      "sha256": "949a968be4e2ba68d615432f7a7d505626ab77aa69ef1b2400496ce76d7273b5"
+    },
+    {
+      "site": "01303152",
+      "name": "West Harbor at Oyster Bay NWR at Bayville NY",
+      "file": "usgs_dv_01303152.rdb",
+      "url": "https://waterservices.usgs.gov/nwis/dv/?format=rdb&sites=01303152&parameterCd=32316%2C00010%2C90860%2C00300%2C63680&statCd=00001%2C00002%2C00003&startDT=2010-01-01&endDT=2026-11-16",
+      "bytes": 152024,
+      "data_rows": 1205,
+      "sha256": "fd18fb145565bd74e7fd76a5f7404090288591ff0516f09e1dc376982763072f"
+    }
+  ]
+}

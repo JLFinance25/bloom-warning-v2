@@ -1,6 +1,8 @@
-# Raw data is downloaded, not committed (data/raw/SOURCES.md says from where)
+# Raw data is downloaded, not committed (data/raw/SOURCES.md says from where),
+# except SOURCES.md and data/raw/usgs_long_island/ (the five USGS station files and their manifest)
 data/raw/*
 !data/raw/SOURCES.md
+!data/raw/usgs_long_island/
 data/processed/
 
 .venv/

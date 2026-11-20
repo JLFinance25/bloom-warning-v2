@@ -1,6 +1,6 @@
 # How this public copy differs from the private working repo
 
-Built by script from private commit `c81dc24`. The private repo's history is not published, because
+Built by script from private commit `14c713d`. The private repo's history is not published, because
 it holds private notes and names.
 
 ## Reworded for privacy
@@ -72,10 +72,15 @@ A two-line header was added at the top. So this copy's hash differs from the loc
 - research/09-privacy-scan-2026-11-17.md (a scan of the private repo)
 - tools/ (this build script)
 - every San Francisco Bay output file (restricted source data)
-- all raw data (see data/raw/SOURCES.md for how to download the public part)
+- the satellite and weather downloads (see data/raw/SOURCES.md for how to download them); the five USGS station files are included, see "Added"
 
 ## Added
 - `results/`: copies of the Long Island output files (39 files from li_run1, li_t4_run1).
   The report's source tags such as `li_run1/verdicts.csv` point at these.
+- `data/raw/usgs_long_island/`: the 5 USGS station files the study used and their `MANIFEST.json`, copied byte
+  for byte and checked against the manifest's SHA-256 at build time. The station files are U.S. Government public-domain data.
+  The scan skips its three number checks (restricted numbers, Bay years-won counts, Bay result numbers)
+  for these files only, because they come from the USGS public server and are checked by hash; the
+  private-term and station-code checks still run on them.
 - `team_code/`: extracts of the team's earlier code, with credit. See `team_code/README.md`.
 - `LICENSE` and `LICENSE-TEXT.md`: the two license files named in the README.

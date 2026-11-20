@@ -361,6 +361,8 @@ Who did what, by date. One or two lines per session.
   scan the copy, make a fresh one-commit repository from it, rename the private working repository, create the
   public one, compare what was uploaded with the scanned copy, and check it while logged out. What happens after
   this line is logged in the private work log, so the public copy of this log ends here.
-[Public copy: later entries are kept in the private work log. The one dated note below was added for the 2026-11-19 public update.]
+[Public copy: later entries are kept in the private work log. The two dated notes below were added for the 2026-11-19 public updates.]
 
 - 2026-11-19, public update. After an independent AI read of the published copy, three corrections were made. (1) The report's "base rate" wording was corrected, and the plan's two other reading-only rules are now reported. (2) Two deviations from the plan, D2 and D3, were written down in `DEVIATIONS.md` and the report. (3) One more passage in `research/08-tester-gate-opus.md` was redacted. No score, verdict or data file changed.
+
+- 2026-11-19, second public update. The five USGS station files the study used, and their manifest, were added in `data/raw/usgs_long_island/`. A test on 2026-11-18 from a fresh no-login copy of the published repository: the README's setup, download and study commands all ran. USGS had revised values since the 2026-11-17 pull: the new download differed from the study's files in all five stations. With the new download the three verdicts were the same (all NOT SHOWN, 458 events, 11 years); to four places the one-input rule (0.4840), T1 (0.4328) and T2 (0.4218) were the same, and T3 was 0.4781 against the reported 0.4739. With the study's own files, the same fresh setup gave 18 of 19 output files byte-identical to `results/li_run1/`; the other is `summary.txt`, with only its added first line. No score, verdict or result file changed in this update.

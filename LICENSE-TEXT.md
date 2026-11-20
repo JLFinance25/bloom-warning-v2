@@ -9,3 +9,6 @@ Credit: Jayden Ling. Drafted with Claude (AI); directed, checked and approved by
 
 This license does not cover `team_code/` (see `team_code/README.md`) or the code in `src/` and `tests/`
 (see `LICENSE`).
+
+The five USGS station files (`.rdb`) in `data/raw/usgs_long_island/` are U.S. Government public-domain data and are not covered by
+either license. (`data/raw/SOURCES.md` stays covered by the text license.)
