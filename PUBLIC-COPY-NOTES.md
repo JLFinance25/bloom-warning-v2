@@ -1,6 +1,6 @@
 # How this public copy differs from the private working repo
 
-Built by script from private commit `14c713d`. The private repo's history is not published, because
+Built by script from private commit `b624a38`. The private repo's history is not published, because
 it holds private notes and names.
 
 ## Reworded for privacy
@@ -28,9 +28,10 @@ redaction marks. The cut in `research/06-power-check.txt` is described in the ne
 
 ## Long Island only
 The plan covered two places: Long Island and San Francisco Bay. The Bay half was run on a restricted
-sensor file. This copy holds no result, number or station-level fact from that file, and none from
-this study's Bay run. It still says that the plan covered the Bay, and it keeps the Bay methods and
-the Bay code, with no value from that file in them.
+sensor file. This copy holds no measured value and no result from that file, and no result from
+this study's Bay run. Some general facts about the file (how many stations, the dates it covers, the
+years counted) stay in the plan. It still says that the plan covered the Bay, and it keeps the Bay
+methods and the Bay code, with no measured value from that file in them.
 Where such a value stood in a copied file, it is replaced by the mark `[redacted: from the restricted Bay file]`.
 
 | File | Redaction marks |
@@ -48,7 +49,8 @@ Where such a value stood in a copied file, it is replaced by the mark `[redacted
   in `src/outside_sentinel2.py`.
 - The anchor's expected Bay counts and scores are left out of `src/config.py` and `src/anchor.py`.
 - The two "SF Bay-like" scenarios are left out of `src/power_check.py` and
-  `research/06-power-check.txt`.
+  `research/06-power-check.txt`. The plan's own short summary of those made-up scenarios is kept in
+  `PREREG.md` section 8.
 - So these parts of the code cannot be run from this copy: the Bay run, the anchor check and the
   Bay-like power scenarios.
 - The build script scans every file for Bay station codes, restricted numbers and numbers taken from

@@ -34,6 +34,10 @@ Each entry says whether any score had been seen when the choice was made.
 Chosen by the builder before any score was seen, and accepted by Claude (Fable):
 1. USGS series choice: non-missing days are counted before estimated values are dropped; a tie goes to the lower
    series number. Chosen per parameter and statistic.
+   Note added 2026-11-19: the count covers the whole record, so later years (the test years and 2026) helped
+   choose the series used in earlier years. Only turbidity at 01310740 and 01304562 had competing series
+   [li_run1/audit_li_series.csv; src/data_li.py]. The effect on scores was not measured. Choosing on training
+   years only would need a rerun, which has not been done (open).
 2. USGS qualifiers other than "e": values marked `<`, `>` or partial-day are kept; non-numeric entries such as
    "Eqp" (equipment fault) are missing.
 3. Decision check: the 90th percentile uses numpy's default method; "exceeds" is strictly greater; for the
@@ -89,3 +93,12 @@ Chosen by the satellite builder, checked and accepted by Claude (Fable). No scor
     reader: they need the team's full files and the restricted data.
     Update 2026-11-18: the limit about the T4 table is closed. The satellite and weather table was rebuilt from the
     raw downloads alone, and it is byte-identical to the one the runs used [WORKLOG.md].
+
+## Known error in two generated result files (written down 2026-11-19)
+- **What is wrong:** line 3 of `results/li_run1/summary.txt` and of `results/li_t4_run1/summary.txt` says B2 at Long
+  Island is B2-LI, "a weaker bar than SF Bay's B2", and that "every Long Island margin below is against that weaker
+  bar". The second claim is wrong, and "weaker" was never tested. `src/run_study.py` (lines 224 and 225) writes it.
+- **What is true:** column `bar_method` in `verdicts.csv` shows B1 for every try that was run. B1 scored 0.4840 and B2-LI 0.4404
+  [li_run1/primary_scores.csv; li_run1/verdicts.csv], so B1 was the bar for every Long Island margin.
+- **What was done:** nothing in the code or the result files was changed, so the files still match the runs that
+  made them. The report and README say B1 was the bar. A reader should trust `verdicts.csv` over that sentence.
