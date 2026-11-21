@@ -1,6 +1,6 @@
 # How this public copy differs from the private working repo
 
-Built by script from private commit `b624a38`. The private repo's history is not published, because
+Built by script from private commit `07e8a00`. The private repo's history is not published, because
 it holds private notes and names.
 
 ## Reworded for privacy

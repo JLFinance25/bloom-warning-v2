@@ -38,6 +38,11 @@ Chosen by the builder before any score was seen, and accepted by Claude (Fable):
    choose the series used in earlier years. Only turbidity at 01310740 and 01304562 had competing series
    [li_run1/audit_li_series.csv; src/data_li.py]. The effect on scores was not measured. Choosing on training
    years only would need a rerun, which has not been done (open).
+   Note added 2026-11-20: an exploratory check has now measured it. The two series at each station never share
+   a day, so keeping one dropped every value of the other; the rule kept the newer, longer series. Rerun two other
+   ways: with splice no verdict changed; the other way was scored as a point score only, and the one-input rule
+   stayed ahead [research/10-series-choice-check-2026-11-20/README.md]. The check was chosen after the results
+   were known.
 2. USGS qualifiers other than "e": values marked `<`, `>` or partial-day are kept; non-numeric entries such as
    "Eqp" (equipment fault) are missing.
 3. Decision check: the 90th percentile uses numpy's default method; "exceeds" is strictly greater; for the

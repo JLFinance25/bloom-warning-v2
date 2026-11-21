@@ -1,0 +1,38 @@
+--- a/src/data_li.py
++++ b/src/data_li.py
+@@ -16,6 +16,8 @@
+ 
+ from __future__ import annotations
+ 
++import os
++
+ import re
+ from io import StringIO
+ from pathlib import Path
+@@ -75,14 +77,24 @@
+                 if f"{column}_cd" not in table.columns:
+                     raise ValueError(f"Station {station}: column {column} has no qualifier column.")
+                 numeric = pd.to_numeric(table[column], errors="coerce")
+-                counts.append((int(numeric.notna().sum()), ts_id, column))
++                _mode = os.environ.get('SERIES_MODE', '')
++                _mask = (dates < pd.Timestamp(_mode.split(':', 1)[1])) if _mode.startswith('before:') else True
++                counts.append((int((numeric.notna() & _mask).sum()), ts_id, column))
+             # most non-missing days; tie -> lower TS_ID (candidates are sorted by TS_ID, max keeps the first)
+             best = max(counts, key=lambda item: (item[0], -item[1]))
+             n_valid, ts_id, column = best
+             raw = table[column]
++            codes_spliced = table[f"{column}_cd"]
++            if os.environ.get('SERIES_MODE', '') == 'splice' and len(candidates) > 1:
++                for _n, _ts2, col2 in counts:
++                    if col2 == column:
++                        continue
++                    take = pd.to_numeric(raw, errors='coerce').isna() & pd.to_numeric(table[col2], errors='coerce').notna()
++                    raw = raw.where(~take, table[col2])
++                    codes_spliced = codes_spliced.where(~take, table[f"{col2}_cd"])
+             numeric = pd.to_numeric(raw, errors="coerce")
+             non_numeric = int((raw.notna() & numeric.isna()).sum())
+-            codes = table[f"{column}_cd"]
++            codes = codes_spliced
+             estimated = _qualifier_has(codes, "e") & numeric.notna().to_numpy()
+             provisional = _qualifier_has(codes, "P")
+             values = numeric.to_numpy(dtype=float).copy()

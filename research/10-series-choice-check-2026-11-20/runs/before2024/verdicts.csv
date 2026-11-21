@@ -1,0 +1,5 @@
+method,counted_years,counted_events,bar_method,primary_score,margin,interval_low,interval_high,low_end_reaches_10pct,years_won,years_counted,years_required,verdict
+T1,11,458,B1,0.425409521801,-0.121052440769,-0.21790945733,-0.0271438849982,False,1,11,9,NOT SHOWN
+T2,11,458,B1,0.418771600421,-0.134767189725,-0.246749225316,-0.0324846230124,False,1,11,9,NOT SHOWN
+T3,11,458,B1,0.483478982013,-0.00107390784034,-0.137178553574,0.128288551551,False,7,11,9,NOT SHOWN
+T4,11,458,,,,,,,,,,NOT RUN
